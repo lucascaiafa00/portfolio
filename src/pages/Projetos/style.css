@@ -1,0 +1,49 @@
+#projetos{
+    margin: 0 10vw;
+}
+
+.projetos-container{
+    display: flex;
+    gap: 40px;
+    transition: ease .4s;
+    width: max-content;
+    margin-top: 50px;
+}
+
+.a{
+    box-shadow: 0 0 20px black;
+    background-color: aliceblue;
+    width: 200px;
+    height: 250px;
+    transition: ease .3s;
+    opacity: 60%;
+}
+
+.projeto-atual{
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.prev-button,.next-button{
+    position: absolute;
+    top: 45%;
+
+    border: none;
+    background: none;
+    color: var(--cor4);
+    font-size: 100px;
+    cursor: pointer;
+    transition: ease .4s;
+}
+
+.prev-button:hover,.next-button:hover{
+    color: var(--cor3);
+}
+
+.next-button{
+    right: 0;
+}
+
+.prev-button{
+    left: 0;
+}

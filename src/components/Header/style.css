@@ -1,0 +1,103 @@
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+.logo{
+    width: 60px;
+}
+
+menu{
+    position: relative;
+}
+
+.botao-menu{
+    width: 40px;
+    height: 40px;
+    
+    background: none;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    cursor: pointer;
+}
+
+.botao-menu.ativo .l3{
+    background-color: var(--cor4);
+    transform: translateY(220px);
+}
+
+.botao-menu.ativo .l1{
+    position: relative;
+    transform: translateY(14px) rotate(45deg);
+}
+
+.botao-menu.ativo .l2{
+    transform: rotate(-45deg);
+}
+
+.l{
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--cor2);
+    transition: ease .5s;
+}
+
+nav{
+    position: absolute;
+    height: 0;
+    right: 0;
+    overflow: hidden;
+    transition: ease .5s;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+}
+
+nav.ativo{
+    height: 200px;
+    opacity: 1;
+}
+
+nav ul{
+    height: 100%;
+    width: max-content;
+    padding: 20px 5px 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    list-style: none;
+
+}
+
+.link{
+    color: var(--cor2);
+
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: ease .3s;
+}
+
+li{
+    transition: ease .5s;
+}
+
+.link:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--cor4);
+}

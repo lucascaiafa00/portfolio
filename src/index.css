@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Changa+One&family=Days+One&family=Krona+One&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --cor1: rgb(16, 16, 16);
+  --cor2: rgb(242, 242, 242);
+  --cor3: rgb(80, 80, 80);
+  --cor4: rgb(99, 201, 133);
+}
+
+body{
+  overflow: hidden;
+  background-color: var(--cor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto Mono', monospace;
+}
+
+main{
+  width: 90vw;
+  height: 90vh;
+  border: solid 2px var(--cor3);
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+main::-webkit-scrollbar{
+  width: 0;
+}
+
+.titulo{
+  color: transparent;
+  -webkit-text-stroke: 2px var(--cor4);
+  border-bottom: solid 2px var(--cor3);
+
+  font-size: 40px;
+  font-family: 'Archivo Black';
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+}
