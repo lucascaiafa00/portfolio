@@ -130,8 +130,8 @@
   background-repeat: repeat;
   animation: ruido 8s steps(10) infinite;
   pointer-events: none;
-  mix-blend-mode: color-burn;
-  opacity: 60%;
+  mix-blend-mode: multiply;
+  opacity: 80%;
 }
 
 @keyframes moveInCircle {

@@ -48,10 +48,18 @@ export default function Projetos() {
               to={`/projetos/${projeto.id}`}
               key={projeto.id}
               className={`projeto ${
-                projeto.status == "incompleto" ? "projeto-incompleto" : ""
-              } ${contador == projeto.id ? "projeto-atual" : ""}`}
+                projeto.status === "incompleto" ? "projeto-incompleto" : ""
+              } ${contador === projeto.id ? "projeto-atual" : ""}`}
+              style={{
+                backgroundImage: `linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(0, 0, 0)),url(${projeto.imagem_desktop})`,
+              }}
             >
-              <p>{projeto.nome}</p>
+              <p className="nome-projeto">{projeto.nome}</p>
+              <div className="tecnologias">
+                {projeto.tecnologias.map((tecnologia, index) => (
+                  <p key={index}>{tecnologia}</p>
+                ))}
+              </div>
             </Link>
           ))}
         </div>
