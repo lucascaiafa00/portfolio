@@ -20,11 +20,11 @@ function App() {
       <Header/>
       <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Inicio />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/contato" element={<Contato />} />
-            <Route path="/projetos" element={<Projetos />} />
-            <Route path="/projetos/:id" element={<Projeto />} />
+            <Route path="/portfolio" element={<Inicio />} />
+            <Route path="/portfolio/sobre" element={<Sobre />} />
+            <Route path="/portfolio/contato" element={<Contato />} />
+            <Route path="/portfolio/projetos" element={<Projetos />} />
+            <Route path="/portfolio/projetos/:id" element={<Projeto />} />
           </Routes>
         </AnimatePresence>
       </main>
