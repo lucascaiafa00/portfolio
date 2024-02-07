@@ -53,6 +53,7 @@
 }
 
 .projeto-incompleto{
+    pointer-events: none;
     background-image: url(../../assets/em-breve.jpg);
 }
 

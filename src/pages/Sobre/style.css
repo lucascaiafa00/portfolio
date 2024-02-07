@@ -40,13 +40,35 @@
 }
 
 .icone{
-    transition: ease .4s;
-    width: 60px;
+    font-size: 80px;
+    color: var(--cor2);
 }
 
-.icone:hover{
-    mix-blend-mode: normal;
+.icone-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: ease .4s;
+}
+
+.icone-container:hover{
     transform: scale(1.2);
+}
+
+.js *:hover{
+    color: #f1c766;
+}
+
+.html *:hover, .java *:hover{
+    color: #f7945f;
+}
+
+.css *:hover, .postgre *:hover{
+    color: #4e75e1;
+}
+
+.bootstrap *:hover{
+    color: #954ee1;
 }
 
 @media screen and (max-width: 1150px) {

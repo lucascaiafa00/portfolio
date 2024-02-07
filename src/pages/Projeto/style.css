@@ -1,0 +1,39 @@
+#projeto{
+    padding: 0 10vw;
+}
+
+#projeto h2{
+    font-size: 30px;
+    color: var(--cor4);
+}
+
+.imagens-projeto, .descricao{
+    width: 50%;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.imagem-desktop{
+    width: 90%;
+}
+
+.links-projeto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-projeto a{
+    background-color: var(--cor4);
+    color: var(--cor1);
+    padding: 2px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: ease .2s;
+}
+
+.links-projeto a:hover{
+    background-color: var(--cor3);
+    color: var(--cor2);
+}

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import projetos from "../../components/ProjetosData";
+import {motion} from "framer-motion"
 import "./style.css";
 
 export default function Projeto() {
@@ -8,9 +9,13 @@ export default function Projeto() {
   console.log(projeto);
 
   return (
-    <>
+    <section id="projeto">
       {projeto ? (
-        <>
+        <motion.div 
+        initial={{opacity:0, y:-20}}
+        animate={{opacity:1, y:0}}
+        exit={{opacity:0, y:-20}}
+        transition={{duration: 1}}>
           <h2>{projeto.nome}</h2>
           <p>{projeto.data}</p>
           <div className="tecnologias">
@@ -18,19 +23,19 @@ export default function Projeto() {
               <p key={index}>{tecnologia}</p>
             ))}
           </div>
-          <div>
-            <img src={projeto.imagem_desktop} alt="" />
-            <img src={projeto.imagem_mobile} alt="" />
+          <div className="imagens-projeto">
+            <img className="imagem-desktop" src={projeto.imagem_desktop} alt="" />
+            <img className="imagem-mobile" src={projeto.imagem_mobile} alt="" />
           </div>
-          <p>{projeto.descricao}</p>
-          <div>
+          <p className="descricao">{projeto.descricao}</p>
+          <div className="links-projeto">
             <a href={projeto.link_demo}>Acessar Projeto</a>
             <a href={projeto.link_repositorio}>Acessar Repositório</a>
           </div>
-        </>
+        </motion.div>
       ) : (
         <p>Projeto não encontrado</p>
       )}
-    </>
+    </section>
   );
 }
