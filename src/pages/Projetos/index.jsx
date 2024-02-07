@@ -32,32 +32,35 @@ export default function Projetos() {
       >
         Projetos
       </motion.h1>
-      <motion.div className="carrossel-container"
+      <motion.div
+        className="carrossel-container"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
         transition={{ duration: 1, delay: 0.4 }}
-        >
-      <div
-        className="carrossel"
-        style={{ left: `calc(50% + ${x}px)`, position: "relative" }}
       >
-        {projetos.map((projeto) => (
-          <Link
-            to={`/projetos/${projeto.id}`}
-            key={projeto.id}
-            className={`projeto ${contador == projeto.id ? "projeto-atual" : ""}`}
-          >
-            <p>{projeto.nome}</p>
-          </Link>
-        ))}
-      </div>
-      <button className="prev-button" onClick={() => handleClick(1)}>
-        <IoIosArrowBack />
-      </button>
-      <button className="next-button" onClick={() => handleClick(-1)}>
-        <IoIosArrowForward />
-      </button>
+        <div
+          className="carrossel"
+          style={{ left: `calc(50% + ${x}px)`, position: "relative" }}
+        >
+          {projetos.map((projeto) => (
+            <Link
+              to={`/projetos/${projeto.id}`}
+              key={projeto.id}
+              className={`projeto ${
+                projeto.status == "incompleto" ? "projeto-incompleto" : ""
+              } ${contador == projeto.id ? "projeto-atual" : ""}`}
+            >
+              <p>{projeto.nome}</p>
+            </Link>
+          ))}
+        </div>
+        <button className="prev-button" onClick={() => handleClick(1)}>
+          <IoIosArrowBack />
+        </button>
+        <button className="next-button" onClick={() => handleClick(-1)}>
+          <IoIosArrowForward />
+        </button>
       </motion.div>
     </section>
   );

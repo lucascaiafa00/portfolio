@@ -19,7 +19,8 @@
 
 .projeto{
     box-shadow: 0 0 20px black;
-    background-color: aliceblue;
+    background-color: var(--cor4);
+    color: var(--cor1);
     width: 200px;
     height: 250px;
     transition: ease .3s;
@@ -31,6 +32,11 @@
     transform: scale(1.15);
     opacity: 1;
     pointer-events: all;
+}
+
+.projeto-incompleto{
+    pointer-events: none;
+    background-image: url(../../assets/em-breve.jpg);
 }
 
 .prev-button,.next-button{

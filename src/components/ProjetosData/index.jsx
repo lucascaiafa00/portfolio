@@ -1,9 +1,7 @@
 const projetos = [
-    { id: 1, nome: "Macaco Infinito" },
-    { id: 2, nome: "Renata Melo Beleza" },
-    { id: 3, nome: "Monster Clicker" },
-    { id: 4, nome: "bb" },
-    { id: 5, nome: "aa" },
+    { id: 1, status: "incompleto", nome: "Macaco Infinito", data: "", descricao: "", link_repositorio: "", link_demo: "", imagem_desktop: "", imagem_mobile: "", tecnologias : ["ReactJS","JS", "CSS"]},
+    { id: 2, status: "incompleto", nome: "Renata Melo Beleza", data: "", descricao: "", link_repositorio: "", link_demo: "", imagem_desktop: "", imagem_mobile: "", tecnologias : ["ReactJS","JS", "CSS"]},
+    { id: 3, status: "incompleto", nome: "Monster Clicker", data: "", descricao: "", link_repositorio: "", link_demo: "", imagem_desktop: "", imagem_mobile: "", tecnologias : ["ReactJS","JS", "CSS"]},
   ];
 
 export default projetos
