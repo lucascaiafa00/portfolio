@@ -2,8 +2,8 @@ import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "./style.css";
 import { Link } from "react-router-dom";
-import projetos from "../../components/ProjetosData"
-import {motion} from "framer-motion"
+import projetos from "../../components/ProjetosData";
+import { motion } from "framer-motion";
 
 export default function Projetos() {
   const [x, setX] = useState(-100);
@@ -23,43 +23,42 @@ export default function Projetos() {
   }
   return (
     <section id="projetos">
-      <motion.h1 className="titulo" 
-        initial={{ opacity: 0, y:-30}}
+      <motion.h1
+        className="titulo"
+        initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 1}}>Projetos</motion.h1>
-      <motion.div
-        className="projetos-container"
+        transition={{ duration: 1 }}
+      >
+        Projetos
+      </motion.h1>
+      <motion.div className="carrossel-container"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        >
+      <div
+        className="carrossel"
         style={{ left: `calc(50% + ${x}px)`, position: "relative" }}
-        initial={{ opacity: 0, y:-30}}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 1, delay: .4 }}
       >
         {projetos.map((projeto) => (
           <Link
             to={`/projetos/${projeto.id}`}
             key={projeto.id}
-            className={`a ${contador == projeto.id ? "projeto-atual" : ""}`}
+            className={`projeto ${contador == projeto.id ? "projeto-atual" : ""}`}
           >
             <p>{projeto.nome}</p>
           </Link>
         ))}
-      </motion.div>
-      <motion.button className="prev-button" onClick={() => handleClick(1)}
-        initial={{ opacity: 0, y:-30}}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 1, delay: .4 }}>
+      </div>
+      <button className="prev-button" onClick={() => handleClick(1)}>
         <IoIosArrowBack />
-      </motion.button>
-      <motion.button className="next-button" onClick={() => handleClick(-1)}
-        initial={{ opacity: 0, y:-30}}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 1, delay: .4 }}>
+      </button>
+      <button className="next-button" onClick={() => handleClick(-1)}>
         <IoIosArrowForward />
-      </motion.button>
+      </button>
+      </motion.div>
     </section>
   );
 }

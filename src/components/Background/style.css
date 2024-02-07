@@ -198,3 +198,9 @@
     transform: translate(-10%, 10%);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .cursor {
+    display: none;
+  }
+}

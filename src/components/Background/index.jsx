@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./style.css";
 
 export default function () {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
 
     useEffect(() => {
       const mouseMove = (e) => {

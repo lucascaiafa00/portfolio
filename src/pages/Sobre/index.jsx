@@ -34,7 +34,7 @@ export default function Sobre() {
             modernos.
           </p>
           <p>
-            Além do frontend, possui sólidos conhecimentos em Java e
+            Além do frontend, possuo conhecimento em Java e
             desenvolvimento mobile, buscando constantemente expandir meu
             conjunto de habilidades. Como alguém que está sempre em busca de
             aprendizado, vejo cada desafio como uma oportunidade de crescimento.
