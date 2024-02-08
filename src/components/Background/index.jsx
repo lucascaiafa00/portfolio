@@ -29,7 +29,7 @@ export default function () {
             <filter id="goo">
               <feGaussianBlur
                 in="SourceGraphic"
-                stdDeviation="10"
+                stdDeviation="0"
                 result="blur"
               />
               <feColorMatrix
