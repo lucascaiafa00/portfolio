@@ -29,8 +29,8 @@ export default function Projeto() {
           </div>
           <p className="descricao">{projeto.descricao}</p>
           <div className="links-projeto">
-            <a href={projeto.link_demo}>Acessar Projeto</a>
-            <a href={projeto.link_repositorio}>Acessar Repositório</a>
+            <a target="_blank" href={projeto.link_demo}>Acessar Projeto</a>
+            <a target="_blank" href={projeto.link_repositorio}>Acessar Repositório</a>
           </div>
         </motion.div>
       ) : (

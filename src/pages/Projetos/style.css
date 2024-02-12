@@ -30,14 +30,14 @@
     box-shadow: 0 0 20px black;
     opacity: 60%;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
 
     pointer-events: none;
     transition: ease .3s;
 }
 
 .projeto-atual:hover{
-    background-size: 150%;
+    transform: scale(1.1);
 }
 
 .nome-projeto{

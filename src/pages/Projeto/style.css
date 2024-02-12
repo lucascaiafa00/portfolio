@@ -1,5 +1,5 @@
 #projeto{
-    padding: 0 10vw;
+    padding: 0 10vw 5vh;
 }
 
 #projeto h2{
@@ -11,10 +11,24 @@
     width: 50%;
     display: inline-block;
     margin: 20px 0;
+    position: relative;
+    color: var(--cor2);
+    font-size: 20px;
 }
 
 .imagem-desktop{
     width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.imagem-mobile{
+    height: 90%;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    box-shadow: black 0 0 20px;
 }
 
 .links-projeto{
@@ -28,12 +42,19 @@
     background-color: var(--cor4);
     color: var(--cor1);
     padding: 2px 10px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 5px;
     transition: ease .2s;
+    text-align: center;
 }
 
 .links-projeto a:hover{
     background-color: var(--cor3);
     color: var(--cor2);
+}
+
+@media screen and (max-width: 800px) {
+    .imagens-projeto, .descricao{
+        width: 100%;
+    }
 }
